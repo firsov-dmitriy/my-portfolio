@@ -1,5 +1,4 @@
 'use client';
-
 import { NavBar } from '@/shared/ui';
 import Link from 'next/link';
 import { ModeSwitcher } from '@/features/ModeSwitcher';

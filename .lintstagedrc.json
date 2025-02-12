@@ -1,11 +1,11 @@
 {
-  "*.ts": [
+  "**/*.{ts,tsx}": [
     "prettier --write",
-    "eslint"
+    "eslint --fix"
   ],
-  "*.html": [
-    "eslint",
-    "prettier --write"
+  "**/*.html": [
+    "prettier --write",
+    "eslint --fix"
   ],
-  "*.scss": "prettier --write"
+  "**/*.scss": "prettier --write"
 }
