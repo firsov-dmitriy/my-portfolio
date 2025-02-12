@@ -32,7 +32,7 @@ export const Header = () => {
           </Link>
           <NavBar />
           <div className="flex flex-row-reverse items-center gap-4">
-            <BurgerMenu navBar={<NavBar />} />
+            <BurgerMenu />
             <ModeSwitcher />
           </div>
         </div>
