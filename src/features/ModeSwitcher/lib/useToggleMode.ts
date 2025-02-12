@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Mode } from '../model';
 
-export enum Mode {
-  DARK = 'dark',
-  LIGHT = 'light',
-}
 export const useToggleMode = () => {
   const [mode, setMode] = useState<Mode>(Mode.LIGHT);
 

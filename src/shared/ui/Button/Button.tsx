@@ -29,6 +29,4 @@ export const Button = ({ variant = 'primary', ...props }: IButtonProps) => {
       </button>
     );
   }
-
-  return <button className={cn('bge', className)}>{children}</button>;
 };

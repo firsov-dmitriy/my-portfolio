@@ -1,7 +1,9 @@
 'use client';
 
-import { ModeSwitcher, NavBar } from '@/shared/ui';
+import { NavBar } from '@/shared/ui';
 import Link from 'next/link';
+import { ModeSwitcher } from '@/features/ModeSwitcher';
+import { BurgerMenu } from '@/features/BurgerMenu';
 
 export const Header = () => {
   return (
@@ -29,7 +31,10 @@ export const Header = () => {
             </svg>
           </Link>
           <NavBar />
-          <ModeSwitcher />
+          <div className="flex flex-row-reverse items-center gap-4">
+            <BurgerMenu navBar={<NavBar />} />
+            <ModeSwitcher />
+          </div>
         </div>
       </nav>
     </header>

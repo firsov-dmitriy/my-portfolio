@@ -3,10 +3,4 @@
 @tailwind utilities;
 
 
-:root {
-    --primary-light: #7395AE;
-    --secondary-light: #379683;
-    --primary-dark: #557A95;
-    --secondary-dark: #5D5C61;
-}
 
