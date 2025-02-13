@@ -5,7 +5,7 @@ import { appWithTranslation } from 'next-i18next';
 
 const App = function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div className="dark:bg-slate-100">
       <Header />
       <div className="container mx-auto">
         <Component {...pageProps} />

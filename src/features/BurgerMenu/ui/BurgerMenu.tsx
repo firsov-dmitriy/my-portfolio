@@ -28,48 +28,32 @@ export const BurgerMenu = () => {
   }, [isOpen]);
 
   return (
-    <div className="displ relative sm:block md:hidden" ref={menuRef}>
-      {/* Кнопка для открытия меню */}
+    <div className="relative block sm:block md:hidden" ref={menuRef}>
       <button
-        className="group flex h-12 w-12 items-center justify-center rounded bg-white text-slate-800 shadow transition hover:cursor-pointer hover:shadow-lg"
+        className="relative h-10 rounded bg-slate-400 p-2"
         aria-pressed={isOpen}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="sr-only">Menu</span>
-        <svg
-          className="pointer-events-none h-6 w-6 fill-current"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
+        <div className="grid justify-items-center gap-1.5">
+          <span
             className={cn(
-              'origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-out',
-              { 'translate-x-0 translate-y-0 rotate-[315deg]': isOpen },
+              'h-[2px] w-6 rounded-full bg-black transition',
+              isOpen ? 'translate-y-2 rotate-45' : '',
             )}
-            y="7"
-            width="9"
-            height="2"
-            rx="1"
           />
-          <rect
-            className={cn('origin-center transition-all duration-300 ease-out', {
-              'rotate-45': isOpen,
-            })}
-            y="7"
-            width="16"
-            height="2"
-            rx="1"
+          <span
+            className={cn(
+              'h-[2px] w-6 rounded-full bg-black transition',
+              isOpen ? 'scale-x-0' : '',
+            )}
           />
-          <rect
-            className={cn('origin-center translate-y-[5px] transition-all duration-300 ease-out', {
-              'translate-y-0 rotate-[135deg]': isOpen,
-            })}
-            y="7"
-            width="9"
-            height="2"
-            rx="1"
+          <span
+            className={cn(
+              'h-[2px] w-6 rounded-full bg-black transition',
+              isOpen ? '-translate-y-2 -rotate-45' : '',
+            )}
           />
-        </svg>
+        </div>
       </button>
 
       {isOpen && (
