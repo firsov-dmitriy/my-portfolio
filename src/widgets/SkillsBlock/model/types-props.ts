@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
 export interface ISkillsBlockProps {
-  skills: { name: string; icon: ReactNode }[];
+  skills: { name: string; icon: string }[];
   className?: string;
 }

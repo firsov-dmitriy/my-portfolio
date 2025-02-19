@@ -11,7 +11,8 @@ export const getProjectById = async (projectId: number) => {
       JSONB_AGG(
           DISTINCT JSONB_BUILD_OBJECT(
               'name', s.name,
-              'id', s.id
+              'id', s.id,
+              'icon', s.icon
           )
       ) AS skills,
       JSONB_AGG(

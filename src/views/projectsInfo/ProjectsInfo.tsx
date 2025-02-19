@@ -33,7 +33,7 @@ export const ProjectsInfo = (props: IProjectsInfoProps) => {
         <div className="default-card">
           <h3 className="text-xl font-bold">Технический стек</h3>
           <SkillsBlock
-            skills={addIconToSkills(skills)}
+            skills={skills}
             className="mt-2 flex flex-row flex-wrap gap-4 md:flex-nowrap"
           />
         </div>

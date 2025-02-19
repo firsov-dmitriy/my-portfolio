@@ -12,6 +12,7 @@ export type TProjects = TProject[];
 
 interface Skill {
   name: string;
+  icon: string;
   id: number;
 }
 

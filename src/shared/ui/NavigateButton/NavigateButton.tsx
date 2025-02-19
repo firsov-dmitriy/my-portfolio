@@ -1,7 +1,7 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { INavigateButtonProps } from './types';
 import cn from 'classnames';
+import { useRouter } from 'next/navigation';
 
 export const NavigateButton = (props: INavigateButtonProps) => {
   const { children, href, disabled, className, ...buttonProps } = props;

@@ -2,7 +2,6 @@
 import { IProjectCardProps } from './types';
 import { SkillsBlock } from '@/widgets/SkillsBlock';
 import { NavigateButton } from '@/shared/ui';
-import { addIconToSkills } from '@/shared/model/skills';
 
 export const ProjectCard = async (props: IProjectCardProps) => {
   const { name, description, skills, idx } = props;
@@ -14,10 +13,10 @@ export const ProjectCard = async (props: IProjectCardProps) => {
         <div>
           <div className="rounded-lg bg-zinc-300 p-4">
             <h5>Технический Стек </h5>
-            <SkillsBlock className="mt-4 flex flex-row gap-4" skills={addIconToSkills(skills)} />
+            <SkillsBlock className="mt-4 flex flex-row gap-4" skills={skills} />
           </div>
         </div>
-        <NavigateButton href={`/projects/${idx + 1}`}>Подробнее</NavigateButton>
+        <NavigateButton href={`projects/${idx + 1}`}>Подробнее</NavigateButton>
       </div>
     </div>
   );
