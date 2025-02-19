@@ -3,14 +3,14 @@ import { TNavLink } from './types';
 export const NAV_LINKS: TNavLink[] = [
   {
     href: '/',
-    title: 'Основная',
+    title: 'main',
   },
   {
     href: '/experience',
-    title: 'Опыт',
+    title: 'experience',
   },
   {
     href: '/projects',
-    title: 'Проекты',
+    title: 'projects',
   },
 ];

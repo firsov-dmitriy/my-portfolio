@@ -1,21 +1,26 @@
 'use client';
-import Link from 'next/link';
 import { NAV_LINKS } from './constants';
 import { usePathname } from 'next/navigation';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'use-intl';
 
 export const NavBar = () => {
   const pathname = usePathname();
+  const t = useTranslations('Navbar');
+  const locale = useLocale();
+
   return (
     <div
-      className="hidden w-full rounded-xl bg-zinc-100 px-10 py-2 md:block md:w-auto dark:bg-zinc-400"
+      className="hidden w-full rounded-xl bg-zinc-100 px-10 py-2 dark:bg-zinc-400 md:block md:w-auto"
       id="navbar-default"
     >
       <ul
         key="nav-ul"
-        className="mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse dark:border-gray-700"
+        className="mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium dark:border-gray-700 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
       >
         {NAV_LINKS.map(({ href, title }) => {
-          const isActive = href === pathname;
+          const isActive = `/${locale}${href}` === pathname;
 
           return (
             <li key={href} className="group flex flex-col hover:cursor-pointer">
@@ -23,7 +28,7 @@ export const NavBar = () => {
                 href={href}
                 className="group-hover:text-blue-800 dark:text-white dark:group-hover:text-blue-200"
               >
-                {title}
+                {t(title)}
               </Link>
               {isActive && (
                 <span className="block h-[2px] rounded-xl bg-black group-hover:bg-blue-800 dark:bg-white dark:group-hover:bg-blue-200" />

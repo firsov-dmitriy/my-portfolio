@@ -4,13 +4,14 @@ import { NAV_LINKS } from '@/shared/ui/NavBar/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
+import { LocaleSwitcher } from '@/features/LocaleSwitcher';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
-
-  // Закрытие при клике вне меню
+  const t = useTranslations('Navbar');
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -58,6 +59,8 @@ export const BurgerMenu = () => {
 
       {isOpen && (
         <div className="absolute right-2/4 mt-2 w-48 rounded-md bg-white p-4 opacity-100 shadow-lg transition-opacity duration-300">
+          <LocaleSwitcher className="rounded bg-zinc-100 px-4 py-2" />
+
           <ul>
             {NAV_LINKS.map(({ href, title }) => {
               const isActive = href === pathname;
@@ -72,7 +75,7 @@ export const BurgerMenu = () => {
                     )}
                     onClick={() => setIsOpen(false)} // Закрытие при клике на ссылку
                   >
-                    {title}
+                    {t(title)}
                   </Link>
                 </li>
               );

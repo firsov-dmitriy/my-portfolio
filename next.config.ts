@@ -1,21 +1,21 @@
 import type { NextConfig } from 'next';
-import i18n from './next-i18next.config';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntel = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'dummyimage.com',
-        port: '',
+        hostname: 'img.icons8.com',
         pathname: '/**',
-        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'mobx.js.org',
       },
     ],
   },
-  i18n: {
-    defaultLocale: 'ru-RU',
-    locales: ['en-US', 'ru-RU'],
-  },
 };
 
-export default nextConfig;
+export default withNextIntel(nextConfig);

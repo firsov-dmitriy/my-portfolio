@@ -1,3 +1,11 @@
 {
-  "test": "Тест"
+  "HomePage": {
+    "title": "Привет мир!",
+    "about": "Го ту"
+  },
+  "Navbar": {
+    "main": "Основная",
+    "experience": "Опыт",
+    "projects": "Проекты"
+  }
 }

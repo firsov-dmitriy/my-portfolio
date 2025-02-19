@@ -1,5 +1,5 @@
-import { Project } from '../model/Project';
+import { TProject } from '@/shared/model/projects';
 
-export interface IProjectCardProps extends Project {
+export interface IProjectCardProps extends TProject {
   idx: number;
 }

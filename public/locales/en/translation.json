@@ -1,3 +1,11 @@
 {
-  "test": "text2222"
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "Navbar": {
+    "main": "Main",
+    "experience": "Experience",
+    "projects": "Projects"
+  }
 }

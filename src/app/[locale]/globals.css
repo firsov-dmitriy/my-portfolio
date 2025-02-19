@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .default-card {
+        @apply rounded bg-zinc-100 p-4 shadow dark:bg-zinc-200;
+    }
+
+    .list-wrapper {
+        @apply bg-zinc-50 p-4 dark:bg-zinc-400 sm:p-6 lg:p-10
+    }
+}

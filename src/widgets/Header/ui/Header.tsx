@@ -1,10 +1,11 @@
-'use client';
+'use server';
 import { NavBar } from '@/shared/ui';
-import Link from 'next/link';
 import { ModeSwitcher } from '@/features/ModeSwitcher';
 import { BurgerMenu } from '@/features/BurgerMenu';
+import { Link } from '@/i18n/routing';
+import { LocaleSwitcher } from '@/features/LocaleSwitcher';
 
-export const Header = () => {
+export const Header = async () => {
   return (
     <header className="bg-zinc-200 dark:bg-zinc-500">
       <nav className="border-gray-200">
@@ -32,6 +33,7 @@ export const Header = () => {
           <NavBar />
           <div className="flex flex-row-reverse items-center gap-4">
             <BurgerMenu />
+            <LocaleSwitcher className="hidden md:block" />
             <ModeSwitcher />
           </div>
         </div>
