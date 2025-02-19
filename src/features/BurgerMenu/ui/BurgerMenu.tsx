@@ -1,11 +1,11 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { NAV_LINKS } from '@/shared/ui/NavBar/constants';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import cn from 'classnames';
 import { useTranslations } from 'next-intl';
 import { LocaleSwitcher } from '@/features/LocaleSwitcher';
+import { Link } from '@/i18n/routing';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
