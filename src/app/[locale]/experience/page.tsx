@@ -1,9 +1,7 @@
 'use server';
 import { getSkills } from '@/shared/api';
-import { Skills } from '@/views';
-
+import { Experience } from '@/views';
 export default async function Page() {
   const skills = await getSkills();
-
-  return <Skills skills={skills} />;
+  return <Experience skills={skills} />;
 }

@@ -1,15 +1,15 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { NAV_LINKS } from '@/shared/ui/NavBar/constants';
-import { usePathname } from 'next/navigation';
 import cn from 'classnames';
 import { useTranslations } from 'next-intl';
 import { LocaleSwitcher } from '@/features/LocaleSwitcher';
 import { Link } from '@/i18n/routing';
+import { useActiveLink } from '@/shared/model';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const getIsActiveHref = useActiveLink();
   const menuRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('Navbar');
   useEffect(() => {
@@ -63,7 +63,7 @@ export const BurgerMenu = () => {
 
           <ul>
             {NAV_LINKS.map(({ href, title }) => {
-              const isActive = href === pathname;
+              const isActive = getIsActiveHref(href);
 
               return (
                 <li key={href} className="group flex flex-col hover:cursor-pointer">
@@ -73,7 +73,7 @@ export const BurgerMenu = () => {
                       'p-2 group-hover:text-blue-800 dark:text-white dark:group-hover:text-blue-200',
                       { 'rounded bg-zinc-200': isActive },
                     )}
-                    onClick={() => setIsOpen(false)} // Закрытие при клике на ссылку
+                    onClick={() => setIsOpen(false)}
                   >
                     {t(title)}
                   </Link>

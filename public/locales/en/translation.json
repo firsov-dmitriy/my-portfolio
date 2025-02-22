@@ -7,5 +7,19 @@
     "main": "Main",
     "experience": "Experience",
     "projects": "Projects"
+  },
+  "Experience" : {
+    "title": "Technologies and tools that I use in development",
+    "button": "View projects"
+  },
+  "Projects": {
+    "title": "Experience in development: projects in which I participated",
+    "button": "More",
+    "experienceTitle": "Technologies used",
+    "info": {
+      "description": "Project description",
+      "team": "Project team",
+      "results": "Results of work"
+    }
   }
 }

@@ -12,6 +12,5 @@ export default async function Page(props: PageProps) {
   const { projectIds } = await searchParams;
   const projects = await getProjects(projectIds);
 
-  console.log(projects);
   return <Projects projects={projects} />;
 }

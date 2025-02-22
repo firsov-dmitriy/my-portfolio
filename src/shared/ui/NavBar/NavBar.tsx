@@ -1,14 +1,12 @@
 'use client';
 import { NAV_LINKS } from './constants';
-import { usePathname } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'use-intl';
+import { useActiveLink } from '@/shared/model';
 
 export const NavBar = () => {
-  const pathname = usePathname();
   const t = useTranslations('Navbar');
-  const locale = useLocale();
+  const getIsActiveHref = useActiveLink();
 
   return (
     <div
@@ -20,7 +18,7 @@ export const NavBar = () => {
         className="mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium dark:border-gray-700 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
       >
         {NAV_LINKS.map(({ href, title }) => {
-          const isActive = `/${locale}${href}` === pathname;
+          const isActive = getIsActiveHref(href);
 
           return (
             <li key={href} className="group flex flex-col hover:cursor-pointer">
