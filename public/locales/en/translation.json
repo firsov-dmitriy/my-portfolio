@@ -1,25 +1,52 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "HomePage":{
+    "title":"Hello world!",
+    "about":"Go to the about page"
   },
-  "Navbar": {
-    "main": "Main",
-    "experience": "Experience",
-    "projects": "Projects"
+  "Navbar":{
+    "main":"Main",
+    "experience":"Experience",
+    "projects":"Projects"
   },
-  "Experience" : {
-    "title": "Technologies and tools that I use in development",
-    "button": "View projects"
+  "Experience":{
+    "title":"Technologies and tools that I use in development",
+    "button":"View projects"
   },
-  "Projects": {
-    "title": "Experience in development: projects in which I participated",
-    "button": "More",
-    "experienceTitle": "Technologies used",
-    "info": {
-      "description": "Project description",
-      "team": "Project team",
-      "results": "Results of work"
+  "Projects":{
+    "title":"Experience in development: projects in which I participated",
+    "button":"More",
+    "experienceTitle":"Technologies used",
+    "info":{
+      "description":"Project description",
+      "team":"Project team",
+      "results":"Results of work"
+    }
+  },
+  "Main":{
+    "aboutTitle":"About me",
+    "about":"I am a leading developer with 4 years of experience in web development, specializing in architecture, optimization and creation of scalable solutions. He worked on large corporate and international projects, made key technical decisions, improved the code base and developed development processes. I pay special attention to code quality, refactoring, and uniform standards to speed up the team's work and improve product reliability.",
+    "roleTitle":"Role on the team",
+    "role":{
+      "lead":{
+        "title":"Lead Developer",
+        "text":"Made key architectural decisions and developed scalable architecture."
+      },
+      "mentorship":{
+        "title":"Mentorship",
+        "text":"Helped colleagues understand code and explained complex concepts."
+      },
+      "review":{
+        "title":"Cross-Review",
+        "text":"Improved code quality and suggested optimizations."
+      },
+      "technical":{
+        "title":"Technical Leadership",
+        "text":"Participated in strategic development planning."
+      },
+      "refactoring":{
+        "title":"Refactoring & Code Style",
+        "text":"Enhanced code structure, implemented standards, and streamlined the codebase."
+      }
     }
   }
 }

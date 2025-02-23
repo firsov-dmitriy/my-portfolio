@@ -12,7 +12,7 @@ export const translateText = async (text?: string) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.YANDEX_API_KEY}`,
+      Authorization: `Api-Key ${process.env.YANDEX_API_KEY}`,
     },
     body: JSON.stringify({
       folderId: process.env.YANDEX_FOLDER_ID,
