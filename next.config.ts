@@ -14,6 +14,21 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'mobx.js.org',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.react-hook-form.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+        pathname: '/**',
+      },
     ],
   },
 };

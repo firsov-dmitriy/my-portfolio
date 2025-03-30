@@ -22,5 +22,6 @@ export const translateText = async (text?: string) => {
   });
 
   const data = await response.json();
+
   return data.translations[0].text;
 };

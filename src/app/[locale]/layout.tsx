@@ -13,7 +13,7 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
   return (
-    <html lang={params.locale} className="dark:bg-slate-100">
+    <html lang={params?.locale} className="dark:bg-slate-100">
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />

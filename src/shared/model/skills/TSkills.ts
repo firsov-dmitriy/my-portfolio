@@ -4,5 +4,6 @@ export type TSkill = {
   project_ids: string[] | null;
   description?: string;
   icon: string;
+  type: number;
 };
 export type TSkills = Array<TSkill>;
