@@ -4,7 +4,6 @@ import { translateText } from '@/shared/api';
 
 export const Achievements = async (props: IAchievementsProps) => {
   const { achievements, className } = props;
-  console.log(achievements);
   return (
     <ul className={`ml-4 mt-2 list-disc ${className}`}>
       {achievements.map(async (item) => {
