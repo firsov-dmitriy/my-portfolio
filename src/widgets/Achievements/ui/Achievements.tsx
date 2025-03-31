@@ -9,7 +9,7 @@ export const Achievements = async (props: IAchievementsProps) => {
       {achievements.map(async (item) => {
         if (!item.items?.length || item.items.length === 0) {
           return (
-            <li className="font-bold" key={item.name}>
+            <li className="text-base md:text-xl" key={item.name}>
               {await translateText(item.name)}
             </li>
           );

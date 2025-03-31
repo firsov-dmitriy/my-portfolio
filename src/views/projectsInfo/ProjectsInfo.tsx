@@ -37,6 +37,7 @@ export const ProjectsInfo = async (props: IProjectsInfoProps) => {
           <h3 className="text-xl font-bold">{t('experienceTitle')}</h3>
           <SkillsBlock
             skills={skills}
+            isInfo
             className="mt-2 flex flex-row flex-wrap gap-4 md:flex-nowrap"
           />
         </div>
