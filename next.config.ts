@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'miro.medium.com',
+        hostname: 'react-hook-form.com',
         pathname: '/**',
       },
     ],

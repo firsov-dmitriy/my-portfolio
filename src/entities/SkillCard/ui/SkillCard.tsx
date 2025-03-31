@@ -10,7 +10,7 @@ export const SkillCard = async (props: ISkillCardProps) => {
   const t = await getTranslations('Experience');
   const params = new URLSearchParams();
   skill.project_ids?.forEach((id) => params.append('projectIds', id));
-
+  const isProject = Boolean(skill.project_ids);
   const href = `/projects?${params.toString()}`;
   return (
     <div className="skill-card grid grid-rows-[60px,80px,60px] rounded-lg bg-zinc-100 p-4 shadow-md dark:bg-zinc-200">
@@ -20,11 +20,13 @@ export const SkillCard = async (props: ISkillCardProps) => {
       </div>
       <p className="mt-2 text-base text-gray-800">{await translateText(skill.description)}</p>
 
-      <div className="projects mt-4">
-        <NavigateButton disabled={!Boolean(skill.project_ids)} href={href} className="w-full">
-          {t('button')}
-        </NavigateButton>
-      </div>
+      {isProject && (
+        <div className="projects mt-4">
+          <NavigateButton disabled={!Boolean(skill.project_ids)} href={href} className="w-full">
+            {t('button')}
+          </NavigateButton>
+        </div>
+      )}
     </div>
   );
 };
