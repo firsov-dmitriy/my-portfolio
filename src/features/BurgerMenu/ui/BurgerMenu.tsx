@@ -69,7 +69,7 @@ export const BurgerMenu = () => {
                 <li key={href} className="group flex flex-col hover:cursor-pointer">
                   <Link
                     href={href}
-                    className={cn('p-2 group-hover:text-blue-800 dark:group-hover:text-blue-200', {
+                    className={cn('p-2 group-hover:text-blue-800 dark:group-hover:text-blue-500', {
                       'rounded bg-zinc-200 dark:bg-zinc-300': isActive,
                     })}
                     onClick={() => setIsOpen(false)}

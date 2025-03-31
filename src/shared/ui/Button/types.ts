@@ -5,4 +5,5 @@ export interface IButtonProps {
   className?: string;
   children?: ReactNode;
   variant?: TButtonVariant;
+  onClick?: () => void;
 }

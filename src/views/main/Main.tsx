@@ -1,17 +1,27 @@
 'use server';
 
-import { motion } from 'framer-motion';
 import { getTranslations } from 'next-intl/server';
 import { TypeText } from '@/shared/ui/TypeText';
+import { Link } from '@/i18n/routing';
 
 export const Main = async () => {
   const t = await getTranslations('Main');
   const about = t('about');
   const keys = ['lead', 'mentorship', 'review', 'technical', 'refactoring'] as const;
+
   return (
     <div className="list-wrapper flex flex-col gap-4">
       <div className="rounded-xl bg-zinc-100 px-2 py-4 dark:bg-zinc-200 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
-        <h4 className="text-4xl font-semibold">{t('aboutTitle')}</h4>
+        <div className="flex flex-row items-center justify-between">
+          <h4 className="text-4xl font-semibold">{t('aboutTitle')}</h4>
+          <Link
+            target="_blank"
+            className="rounded bg-zinc-300 p-4"
+            href="https://yadi.sk/i/-adlyb4qJHl74Q"
+          >
+            {t('toResume')}
+          </Link>
+        </div>
         <p className="mt-2 text-xl">
           <TypeText text={about} speed={20} />
         </p>
