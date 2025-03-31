@@ -9,7 +9,7 @@ export const ProjectsInfo = async (props: IProjectsInfoProps) => {
   const t = await getTranslations('Projects');
   return (
     <div className="container">
-      <div className="flex flex-col gap-y-4 bg-zinc-50 p-10 dark:bg-zinc-400">
+      <div className="flex flex-col gap-y-4 bg-zinc-50 p-4 dark:bg-zinc-400 lg:p-10">
         <div className="default-card">
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl">{await translateText(name)}</h2>
           <h3 className="mt-2 text-base font-bold md:text-xl">{t('info.description')}</h3>
