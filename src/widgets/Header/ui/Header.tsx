@@ -12,7 +12,7 @@ export const Header = async () => {
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
           <Link href="/" className="">
             <svg
-              width="200"
+              width="150"
               height="60"
               viewBox="0 0 200 60"
               fill="none"
