@@ -21,7 +21,7 @@ export const ProjectCard = async (props: IProjectCardProps) => {
             <SkillsBlock className="flex flex-row flex-wrap gap-4 sm:mt-4" skills={skills} />
           </div>
         </div>
-        <NavigateButton className="mt-2" href={`projects/${idx + 1}`}>
+        <NavigateButton className="dark: mt-2" href={`projects/${idx + 1}`}>
           {t('button')}
         </NavigateButton>
       </div>
