@@ -22,7 +22,7 @@ export const Experience = async (props: ISkillsProps) => {
 
   return (
     <div className="list-wrapper">
-      <h1 className="mb-6 text-center text-3xl font-bold">{t('title')}</h1>
+      <h2 className="mb-6 text-center text-3xl font-bold dark:text-zinc-100">{t('title')}</h2>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {sortedSkills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />

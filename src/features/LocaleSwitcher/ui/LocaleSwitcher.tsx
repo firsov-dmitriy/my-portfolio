@@ -25,7 +25,7 @@ export const LocaleSwitcher = ({ className }: { className?: string }) => {
       <select
         value={locale}
         onChange={(e) => changeLocale(e.target.value)}
-        className="rounded-lg border bg-white px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="rounded-lg border px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
         aria-label="Select language"
       >
         {locales.map(({ code, label }) => (

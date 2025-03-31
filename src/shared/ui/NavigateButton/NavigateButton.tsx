@@ -18,7 +18,7 @@ export const NavigateButton = (props: INavigateButtonProps) => {
       onClick={handleClick}
       disabled={disabled}
       className={cn(
-        `group relative inline-block w-1/3 min-w-max overflow-hidden rounded-xl px-6 py-3 text-lg tracking-wide text-white transition-all duration-300 dark:bg-gray-400 ${disabled ? 'cursor-not-allowed bg-gray-300' : 'bg-gray-200 hover:bg-gray-300'} `,
+        `group relative inline-block w-1/3 min-w-max overflow-hidden rounded-xl px-6 py-3 text-lg tracking-wide text-white transition-all duration-300 dark:bg-zinc-400 ${disabled ? 'cursor-not-allowed bg-gray-300' : 'bg-gray-200 hover:bg-gray-300'} `,
         className,
       )}
       {...buttonProps}

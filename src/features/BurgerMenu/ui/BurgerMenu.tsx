@@ -31,7 +31,7 @@ export const BurgerMenu = () => {
   return (
     <div className="relative block sm:block md:hidden" ref={menuRef}>
       <button
-        className="relative h-10 rounded bg-slate-400 p-2"
+        className="relative h-10 rounded bg-slate-300 p-2 dark:bg-slate-100"
         aria-pressed={isOpen}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -58,8 +58,8 @@ export const BurgerMenu = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-2/4 mt-2 w-48 rounded-md bg-white p-4 opacity-100 shadow-lg transition-opacity duration-300">
-          <LocaleSwitcher className="rounded bg-zinc-100 px-4 py-2" />
+        <div className="absolute right-2/4 mt-2 w-48 rounded-md bg-white p-4 opacity-100 shadow-lg transition-opacity duration-300 dark:bg-zinc-200">
+          <LocaleSwitcher className="rounded bg-zinc-100 px-4 py-2 dark:bg-zinc-200" />
 
           <ul>
             {NAV_LINKS.map(({ href, title }) => {
@@ -69,10 +69,9 @@ export const BurgerMenu = () => {
                 <li key={href} className="group flex flex-col hover:cursor-pointer">
                   <Link
                     href={href}
-                    className={cn(
-                      'p-2 group-hover:text-blue-800 dark:text-white dark:group-hover:text-blue-200',
-                      { 'rounded bg-zinc-200': isActive },
-                    )}
+                    className={cn('p-2 group-hover:text-blue-800 dark:group-hover:text-blue-200', {
+                      'rounded bg-zinc-200 dark:bg-zinc-300': isActive,
+                    })}
                     onClick={() => setIsOpen(false)}
                   >
                     {t(title)}

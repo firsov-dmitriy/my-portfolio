@@ -15,7 +15,7 @@ export const ProjectCard = async (props: IProjectCardProps) => {
       <div className="h-full rounded lg:grid lg:grid-rows-[60px,250px,150px] lg:justify-between">
         <h4 className="text-xl text-black sm:text-2xl">{await translateText(name)}</h4>
         <p className="text-gray mt-2">{await translateText(description)}</p>
-        <div className="sm:mt-2">
+        <div className="mt-2">
           <div className="rounded-lg bg-zinc-300 p-4">
             <h5>{t('experienceTitle')}</h5>
             <SkillsBlock className="flex flex-row flex-wrap gap-4 sm:mt-4" skills={skills} />
