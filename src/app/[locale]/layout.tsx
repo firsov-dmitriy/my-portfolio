@@ -3,6 +3,7 @@ import { Header } from '@/widgets/Header';
 import { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import Head from 'next/head';
 
 export default async function RootLayout({
   children,
@@ -14,6 +15,10 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={params?.locale} className="dark:bg-slate-100">
+      <Head>
+        <title>Resume</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
