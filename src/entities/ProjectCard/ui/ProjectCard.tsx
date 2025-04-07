@@ -12,7 +12,7 @@ export const ProjectCard = async (props: IProjectCardProps) => {
 
   return (
     <div className="rounded-xl bg-zinc-100 px-2 py-4 dark:bg-zinc-200 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
-      <div className="h-full rounded lg:grid lg:grid-rows-[60px,250px,150px] lg:justify-between">
+      <div className="h-full rounded md:grid md:justify-between lg:grid-rows-[60px_250px_150px] xl:grid-rows-[60px_150px_150px]">
         <h4 className="text-xl text-black sm:text-2xl">{await translateText(name)}</h4>
         <p className="text-gray mt-2">{await translateText(description)}</p>
         <div className="mt-2">
@@ -21,7 +21,7 @@ export const ProjectCard = async (props: IProjectCardProps) => {
             <SkillsBlock className="flex flex-row flex-wrap gap-4 sm:mt-4" skills={skills} />
           </div>
         </div>
-        <NavigateButton className="dark: mt-2" href={`projects/${idx + 1}`}>
+        <NavigateButton className="mt-2" href={`projects/${idx + 1}`}>
           {t('button')}
         </NavigateButton>
       </div>

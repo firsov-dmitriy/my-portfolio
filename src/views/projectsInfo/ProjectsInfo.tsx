@@ -13,12 +13,12 @@ export const ProjectsInfo = async (props: IProjectsInfoProps) => {
         <div className="default-card">
           <h2 className="text-xl font-bold md:text-2xl lg:text-3xl">{await translateText(name)}</h2>
           <h3 className="mt-2 text-base font-bold md:text-xl">{t('info.description')}</h3>
-          <p className="text-base text-gray-700 md:text-xl">{await translateText(description)}</p>
+          <p className="text-base md:text-xl">{await translateText(description)}</p>
         </div>
 
         <div className="default-card">
           <h3 className="text-base font-bold md:text-xl">{t('info.team')}</h3>
-          <ul className="ml-4 list-disc text-base text-gray-700 md:text-xl">
+          <ul className="ml-4 list-disc text-base md:text-xl">
             {teams.map(({ name, count }) => (
               <li key={name}>
                 {name} - {count}
