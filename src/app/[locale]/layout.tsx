@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Дмитрий Фирсов',
     description: 'Ведущий разработчик с 4+ годами опыта в веб-разработке',
-    images: '/icon.png',
+    images: 'https://img.icons8.com/parakeet/1024/resume.png',
   },
 };
 
