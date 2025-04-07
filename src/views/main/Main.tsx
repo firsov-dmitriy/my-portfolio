@@ -1,8 +1,9 @@
 'use server';
+import { IoMdCloudDownload } from 'react-icons/io';
 
 import { getTranslations } from 'next-intl/server';
 import { TypeText } from '@/shared/ui/TypeText';
-import { Link } from '@/i18n/routing';
+import { DownloadButton } from '@/shared/ui';
 
 export const Main = async () => {
   const t = await getTranslations('Main');
@@ -12,15 +13,14 @@ export const Main = async () => {
   return (
     <div className="list-wrapper flex flex-col gap-4">
       <div className="rounded-xl bg-zinc-100 px-2 py-4 dark:bg-zinc-200 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <h4 className="text-4xl font-semibold">{t('aboutTitle')}</h4>
-          <Link
-            target="_blank"
-            className="rounded bg-zinc-300 p-4"
-            href="https://yadi.sk/i/-adlyb4qJHl74Q"
-          >
-            {t('toResume')}
-          </Link>
+          <DownloadButton fileName="portfolio.pdf" fileLink="/cv.pdf">
+            <div className="flex flex-row items-center justify-center gap-2">
+              <IoMdCloudDownload size={32} className="text-black dark:text-white" />
+              <p className="text-black dark:text-white">{t('toResume')}</p>
+            </div>
+          </DownloadButton>
         </div>
         <p className="mt-2 text-xl">
           <TypeText text={about} speed={20} />
